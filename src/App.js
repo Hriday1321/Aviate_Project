@@ -3,6 +3,7 @@ import { DivC, Side, Main } from './layouts/Layout.elements'
 import Nav from './layouts/Nav/Nav'
 
 import Home from './pages/Home/Home'
+import Application from "./pages/Application/Application"
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
       <Main>
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/applications" element={'applied'} />
+        <Route path="applications" element={<Application />} />
       </Routes>
       </Main>
     </DivC>
