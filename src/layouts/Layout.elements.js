@@ -9,7 +9,7 @@ export const DivC = styled.div`
 export const Side = styled.div`
     flex: 0.2;
     background-color: white;
-    color: white
+    color: black;
 `
 
 export const Main = styled.div`
