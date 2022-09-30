@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { dummy } from '../../utils/dummy'
+import { rec } from '../../utils/rec'
 import { Grid, T } from './Home.elements'
 
 import Box from '@mui/material/Box';
@@ -36,6 +37,28 @@ function Collection() {
                 <CardActions>
                     <Button value={index} size="small">Current Deadline: {data.cur_deadline.getDate()}/{data.cur_deadline.getMonth() + 1}/{data.cur_deadline.getFullYear()}</Button>
                 </CardActions>    
+                    </Card>
+                </Box>
+            )
+        })}
+    </Grid>
+    <T>Recommended Jobs</T>
+    <Grid>
+        {rec.map((data) => {
+            return (
+                <Box>
+                    <Card>
+                    <CardContent>
+                    <Typography variant="h5" component="div">
+                    {data.name}
+                    </Typography>
+                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                    {data.position}
+                    </Typography>
+                    <Typography sx={{ fontSize: 14 }}>
+                    {data.moni} LPA
+                    </Typography>
+                </CardContent>  
                     </Card>
                 </Box>
             )
