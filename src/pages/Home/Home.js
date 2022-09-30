@@ -5,7 +5,7 @@ import Collection from '../../components/Home/Collection'
 function Home(props) {
   return (
     <div>
-      <Collection/>
+      <Collection callback={props.callback} value={props.value}/>
     </div>
   )
 }

@@ -1,23 +1,9 @@
 import React from 'react'
 import { Space, Wrap, DivT, DivL, Ref } from './Nav.elements'
 
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-
 import {dummy} from '../../utils/dummy'
 
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  };
-}
-
 function Nav(props) {
-  const handleChange = (event, newValue) => {
-    props.callBack(newValue);
-  };
-
   return (
     <div>
       <Wrap>
@@ -35,15 +21,13 @@ function Nav(props) {
         <DivL>
           <Ref to='/'>Applications</Ref>
         </DivL>
-        <Tabs value={props.value} onChange={handleChange} variant="fullWidth">
-        {dummy.map((data, index) => {
+        {dummy.map((data) => {
           return(
             <DivL>
-              <Tab label={data.name} {...a11yProps({index})} />
+              <Ref to='applications'>{data.name}</Ref>
             </DivL>
           )
         })}
-        </Tabs>
       </Wrap>
     </div>
   )

@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 
 export const Wrap = styled.div`
-    border-bottom: solid #aaa 2px;
+    border-bottom: solid white 2px;
     padding: 2%;
 `;
 
@@ -11,7 +11,7 @@ export const Space = styled.div`
 `;
 
 export const DivT = styled.div`
-    color: #888;
+    color: white;
     font-size: 1.4vw;
     display: flex;
     justify-content: center;
@@ -23,12 +23,12 @@ export const DivL = styled.div`
     padding: 2%;
     text-align: center;
     &:hover{
-        background-color: #ddd;
+        background-color: #8c0032;
     }
 `;
 
 export const Ref = styled(NavLink)`
     text-decoration: none;
-    color: #777;
+    color: white;
     font-size: 1.2vw;
 `;

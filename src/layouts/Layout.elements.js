@@ -8,8 +8,9 @@ export const DivC = styled.div`
 
 export const Side = styled.div`
     flex: 0.2;
-    background-color: white;
-    color: black;
+    background-color: #c2185b;
+    color: white;
+    border-right: solid white 2px;
 `
 
 export const Main = styled.div`
