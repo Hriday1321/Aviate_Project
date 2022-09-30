@@ -1,5 +1,5 @@
 import React from 'react'
-import { T, Content, Deadline } from './Application.elements'
+import { T, Content, Deadline, Wrap } from './Application.elements'
 
 import Box from '@mui/material/Box';
 import Stepper from '@mui/material/Stepper';
@@ -27,8 +27,13 @@ function CollectionB(props) {
                 </Step>
             </Stepper>
         </Box>
-        <Content>Position: {props.position}</Content>
-        <Content>Stipend: {props.moni} LPA</Content>
+        <Wrap>
+            <Content>Position: {props.position}</Content>
+            <Content>Stipend: {props.moni} LPA</Content>
+            <Content>Task: {props.task}</Content>
+            <Content>Given On: {props.cur_date.getDate()}/{props.cur_date.getMonth() + 1}/{props.cur_date.getFullYear()}</Content>
+        </Wrap>
+        
         <Deadline>Deadline: {props.cur_deadline.getDate()}/{props.cur_deadline.getMonth() + 1}/{props.cur_deadline.getFullYear()}</Deadline>
     </div>
   )

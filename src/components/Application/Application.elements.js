@@ -27,3 +27,13 @@ export const Deadline = styled.div`
     position: fixed;
     bottom: 0;
 `;
+
+export const Wrap = styled.div`
+    margin: 5% auto;
+    padding: 2%;
+    width: 50%;
+    background-color: #333;
+    text-align: center;
+    border-radius: 3px;
+    color: white;
+`;
