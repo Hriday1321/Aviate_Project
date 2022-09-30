@@ -9,4 +9,21 @@ export const T = styled.div`
     background-color: white;
     border-bottom: solid black 2px;
     color: black;
+    margin-bottom: 1%;
+`;
+
+export const Content = styled.div`
+    font-size: 1.2vw;
+    padding: 1%;
+`;
+
+export const Deadline = styled.div`
+    font-size: 1vw;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #b2fab4;
+    color: #333;
+    padding: 2%;
+    position: fixed;
+    bottom: 0;
 `;
