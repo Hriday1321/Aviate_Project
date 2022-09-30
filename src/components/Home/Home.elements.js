@@ -21,16 +21,17 @@ export const T = styled.div`
 
 export const DivC = styled.div`
     min-width: 200px;
-    background-color: white;
+    background-color: #333;
     border: solid #666 1px;
     border-radius: 2px;
-    color: black;
+    color: white;
 `;
 
 export const N = styled.div`
     font-size: 2vw;
     text-align: center;
     background-color: #333;
+    border-bottom: solid #666 2px;
     padding: 2%;
     color: white;
 `;
