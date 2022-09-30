@@ -1,5 +1,5 @@
 export const dummy = [{
-    name: Netflix,
+    name: 'Netflix',
     applied: new Date('08-22-2022'),
     cur_date: new Date('09-17-2022'),
     cur_deadline: new Date('09-30-2022'),

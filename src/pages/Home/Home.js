@@ -1,9 +1,11 @@
 import React from 'react'
 
+import Collection from '../../components/Home/Collection'
+
 function Home() {
   return (
     <div>
-        Home
+      <Collection />
     </div>
   )
 }
