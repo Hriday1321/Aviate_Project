@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { dummy } from '../../utils/dummy'
+import { Grid, T } from './Home.elements'
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -9,37 +10,40 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
+import { Link } from 'react-router-dom'
+
 function Collection() {
 
   return (
     <div>
+    <T>Applied</T>
+    <Grid>
         {dummy.map((data) => {
             return (
-                <Box sx={{ width: 275 }}>
-                    <Card variant="outlined">
+                <Box>
+                    <Card>
                     <CardContent>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    Application
+                    {data.moni} LPA
                     </Typography>
                     <Typography variant="h5" component="div">
                     {data.name}
                     </Typography>
                     <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    adjective
+                    {data.position}
                     </Typography>
                     <Typography variant="body2">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
+                    {data.task}
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small">Current Deadline: {data.cur_deadline.getDate()}/{data.cur_deadline.getMonth() + 1}/{data.cur_deadline.getFullYear()}</Button>
+                    <Link to='applications' style={{textDecoration:'none'}}><Button size="small">Current Deadline: {data.cur_deadline.getDate()}/{data.cur_deadline.getMonth() + 1}/{data.cur_deadline.getFullYear()}</Button></Link>
                 </CardActions>    
                     </Card>
                 </Box>
             )
         })}
+    </Grid>
     </div>
   )
 }
