@@ -1,6 +1,6 @@
 export const rec = [{
     name: 'Facebook',
-    position: 'JSenior SDE',
+    position: 'Senior SDE',
     moni: 28,
 },
 {

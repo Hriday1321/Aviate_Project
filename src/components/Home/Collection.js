@@ -2,14 +2,7 @@ import React from 'react'
 
 import { dummy } from '../../utils/dummy'
 import { rec } from '../../utils/rec'
-import { Grid, T } from './Home.elements'
-
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import { Grid, T, DivC, N, P, Task, Deadline } from './Home.elements'
 
 function Collection() {
   return (
@@ -18,27 +11,12 @@ function Collection() {
     <Grid>
         {dummy.map((data, index) => {
             return (
-                <Box>
-                    <Card>
-                    <CardContent>
-                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                    {data.moni} LPA
-                    </Typography>
-                    <Typography variant="h5" component="div">
-                    {data.name}
-                    </Typography>
-                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    {data.position}
-                    </Typography>
-                    <Typography variant="body2">
-                    {data.task}
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button value={index} size="small">Current Deadline: {data.cur_deadline.getDate()}/{data.cur_deadline.getMonth() + 1}/{data.cur_deadline.getFullYear()}</Button>
-                </CardActions>    
-                    </Card>
-                </Box>
+                <DivC>
+                  <N>{data.name}</N>
+                  <P>{data.position}: {data.moni} LPA</P>
+                  <Task>{data.task}</Task>
+                  <Deadline>Deadline: {data.cur_deadline.getDate()}/{data.cur_deadline.getMonth() + 1}/{data.cur_deadline.getFullYear()}</Deadline>
+                </DivC>
             )
         })}
     </Grid>
@@ -46,21 +24,11 @@ function Collection() {
     <Grid>
         {rec.map((data) => {
             return (
-                <Box>
-                    <Card>
-                    <CardContent>
-                    <Typography variant="h5" component="div">
-                    {data.name}
-                    </Typography>
-                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    {data.position}
-                    </Typography>
-                    <Typography sx={{ fontSize: 14 }}>
-                    {data.moni} LPA
-                    </Typography>
-                </CardContent>  
-                    </Card>
-                </Box>
+              <DivC>
+                  <N>{data.name}</N>
+                  <P>{data.position}: {data.moni} LPA</P>
+                  <Task>This position was recommended to you because of your interest in similar jobs</Task>
+                </DivC>
             )
         })}
     </Grid>

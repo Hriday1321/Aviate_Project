@@ -21,10 +21,12 @@ function Nav(props) {
         <DivL>
           <Ref to='/'>Applications</Ref>
         </DivL>
-        {dummy.map((data) => {
+        {dummy.map((data, index) => {
           return(
             <DivL>
-              <Ref to='applications'>{data.name}</Ref>
+              <Ref to='applications' state={{
+                index: index
+                }}>{data.name}</Ref>
             </DivL>
           )
         })}
