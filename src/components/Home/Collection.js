@@ -10,8 +10,6 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-import { Link } from 'react-router-dom'
-
 function Collection() {
 
   return (
@@ -37,7 +35,7 @@ function Collection() {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Link to='applications' style={{textDecoration:'none'}}><Button size="small">Current Deadline: {data.cur_deadline.getDate()}/{data.cur_deadline.getMonth() + 1}/{data.cur_deadline.getFullYear()}</Button></Link>
+                    <Button size="small">Current Deadline: {data.cur_deadline.getDate()}/{data.cur_deadline.getMonth() + 1}/{data.cur_deadline.getFullYear()}</Button>
                 </CardActions>    
                     </Card>
                 </Box>
