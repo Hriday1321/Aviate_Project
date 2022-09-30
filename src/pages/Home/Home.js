@@ -2,10 +2,10 @@ import React from 'react'
 
 import Collection from '../../components/Home/Collection'
 
-function Home() {
+function Home(props) {
   return (
     <div>
-      <Collection />
+      <Collection/>
     </div>
   )
 }

@@ -12,11 +12,12 @@ function App() {
   return (
     <DivC className="App">
       <Side>
-        <Nav {...{callback:{setValue}, value: {value}}}/>
+        <Nav callback={setValue} value={value}/>
+        {value}
       </Side>
       <Main>
       <Routes>
-        <Route index element={<Home />} />
+        <Route index element={<Home callback={setValue} value={value}/>} />
       </Routes>
       </Main>
     </DivC>

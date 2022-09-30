@@ -11,12 +11,11 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 function Collection() {
-
   return (
     <div>
     <T>Applied</T>
     <Grid>
-        {dummy.map((data) => {
+        {dummy.map((data, index) => {
             return (
                 <Box>
                     <Card>
@@ -35,7 +34,7 @@ function Collection() {
                     </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small">Current Deadline: {data.cur_deadline.getDate()}/{data.cur_deadline.getMonth() + 1}/{data.cur_deadline.getFullYear()}</Button>
+                    <Button value={index} size="small">Current Deadline: {data.cur_deadline.getDate()}/{data.cur_deadline.getMonth() + 1}/{data.cur_deadline.getFullYear()}</Button>
                 </CardActions>    
                     </Card>
                 </Box>
